@@ -3,46 +3,39 @@ using namespace std;
 
 int main()
 {
-	
-	int arr[5],k,x,i,temp;
-	
-	cout<<"Enter 5 numbers "<<endl;
-	for(i=0;i<5;i++)
-	{
-		cin>>arr[i];
-	}
-	cout<<endl;
-	cout<<"Initial array"<<endl;
-	for(i=0;i<5;i++)
-	{
-		cout<<arr[i]<<" ";
-		cout<<endl;	
-	}
-	
-	cout<<"Enter number of rotations"<<endl;
-	cin>>x;
-	
-	//rotation
-	for(k=0;k<x;k++)
-	{
-		temp = arr[0];
-		for(i=0;i<4;i++)
-		{
-			arr[i]=arr[i+1];
-		}
-		arr[4]=temp;
-	}
+    
+    long unsigned  k,x,i,temp;
+    long unsigned  y;
+    cin>>y>>x;
+    int arr[y];
+    
+    for(i=0;i<y;i++)
+    {
+        cin>>arr[i];
+    }
+    
+      
+    //rotation
+    for(k=0;k<x;k++)
+    {
+        temp = arr[0];
+        for(i=0;i<y-1;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+        arr[4]=temp;
+    }
 
-	//after rotation
-	
-	cout<<"Final array "<<endl;
-	for(i=0;i<5;i++)
-	{
-		cout<<arr[i]<<" ";
-	}
-	return 0;
-	
-	
-	
-	
+    //after rotation
+    
+    
+    for(i=0;i<y;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+    
+    
+    
+    
 }
